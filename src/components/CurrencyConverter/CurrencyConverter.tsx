@@ -169,7 +169,7 @@ const CurrencyConverter: React.FC = () => {
         if (isEuroToDollar) {
             addHistoryItem('EURtoUSD', currRate, amountEur, amountUsd);
         } else {
-            addHistoryItem('USDtoEUR', currRate, amountEur, amountUsd);
+            addHistoryItem('USDtoEUR', currRate, amountUsd, amountEur);
         }
     };
 
