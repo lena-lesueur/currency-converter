@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "11.14.0",
+    "@emotion/styled": "11.14.0",
+    "@mui/material": "7.0.1",
+    "@tanstack/react-query": "5.71.10",
     "@testing-library/dom": "10.4.0",
-    "@testing-library/jest-dom": "6.6.3",
-    "@testing-library/react": "16.3.0",
-    "@testing-library/user-event": "13.5.0",
     "@types/jest": "27.5.2",
     "@types/node": "16.18.126",
     "@types/react": "19.1.0",
@@ -21,12 +22,18 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "lint": "eslint 'src/**/*.{ts,tsx}'",
+    "lint:fix": "eslint 'src/**/*.{ts,tsx}' --fix",
+    "prettier": "prettier --write 'src/**/*.{ts,tsx,js,jsx}'"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "plugin:storybook/recommended"
     ]
   },
   "browserslist": {
@@ -40,5 +47,26 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "8.6.12",
+    "@storybook/addon-interactions": "8.6.12",
+    "@storybook/addon-onboarding": "8.6.12",
+    "@storybook/blocks": "8.6.12",
+    "@storybook/preset-create-react-app": "8.6.12",
+    "@storybook/react": "8.6.12",
+    "@storybook/react-webpack5": "8.6.12",
+    "@storybook/test": "8.6.12",
+    "@testing-library/jest-dom": "6.6.3",
+    "@testing-library/react": "16.3.0",
+    "@testing-library/user-event": "14.6.1",
+    "eslint-config-prettier": "10.1.1",
+    "eslint-plugin-prettier": "5.2.6",
+    "eslint-plugin-storybook": "0.12.0",
+    "jest": "27.5.1",
+    "prettier": "3.5.3",
+    "prop-types": "15.8.1",
+    "storybook": "8.6.12",
+    "webpack": "5.98.0"
   }
 }
